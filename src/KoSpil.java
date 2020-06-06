@@ -8,7 +8,7 @@ class KoSpil {
     private ChromeDriver driver;
     private WebDriverWait wait;
 
-    KoSpil() {
+    KoSpil () {
         System.setProperty("webdriver.chrome.driver", ".idea\\Dependencies\\chromedriver.exe");
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 10);
@@ -39,5 +39,9 @@ class KoSpil {
 
     private void clickElement(WebElement e) {
         wait.until(ExpectedConditions.elementToBeClickable(e)).click();
+    }
+
+    void stop() {
+        driver.close();
     }
 }
