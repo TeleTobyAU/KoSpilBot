@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="KoSpilBot:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/KoSpilBot_jar</output-path>
+    <root id="archive" name="KoSpilBot.jar">
+      <element id="module-output" name="KoSpilBot" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../SpamFrederik/libs/guava-25.0-jre.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/.idea/Dependencies/commons-exec-1.3/commons-exec-1.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/.idea/Dependencies/commons-exec-1.3/commons-exec-1.3-tests.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/.idea/Dependencies/commons-exec-1.3/commons-exec-1.3-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/.idea/Dependencies/commons-exec-1.3/commons-exec-1.3-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/.idea/Dependencies/commons-exec-1.3/commons-exec-1.3-test-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/.idea/Dependencies/okio-1.13.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/.idea/Dependencies/client-combined-3.141.59.jar" path-in-jar="/" />
+      <element id="library" level="project" name="client-combined-3.141.59-sources" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/.idea/Dependencies/okhttp-3.9.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
