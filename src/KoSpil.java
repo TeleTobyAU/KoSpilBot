@@ -5,7 +5,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 class KoSpil {
-
     private ChromeDriver driver;
     private WebDriverWait wait;
 
@@ -39,7 +38,6 @@ class KoSpil {
     }
 
     private void clickElement(WebElement e) {
-        WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(e)).click();
     }
 }
