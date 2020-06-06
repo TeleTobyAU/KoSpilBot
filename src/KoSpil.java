@@ -4,18 +4,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class KoSpil {
+class KoSpil {
 
-    ChromeDriver driver;
-    WebDriverWait wait;
+    private ChromeDriver driver;
+    private WebDriverWait wait;
 
-    public KoSpil () {
+    KoSpil() {
         System.setProperty("webdriver.chrome.driver", ".idea\\Dependencies\\chromedriver.exe");
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 10);
     }
 
-    public void run() {
+    void run() {
         driver.get("https://game.scratcher.io/quiz-ko");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[3]/div/div/div[3]/div[2]/div[2]/button[1]")));
 
