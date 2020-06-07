@@ -1,13 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        KoSpil instance = new KoSpil();
-        //BiSpil instance = new BiSpil();
+        //KoSpil instance = new KoSpil();
+        BiSpil instance = new BiSpil();
 
         double time, runTime;
         int n;
 
         if (args.length < 1) {
-            n = 10;
+            n = 5000;
         } else {
             n = Integer.parseInt(args[0]);
         }

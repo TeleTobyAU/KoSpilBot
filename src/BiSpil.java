@@ -28,21 +28,26 @@ class BiSpil {
         for (int i = 0; i < 6; i++) {
             es.addAll(driver.findElements(By.cssSelector("[data-id=\"" + (i + 1) + "\"")));
         }
-        //Flip pieces
-        for (int i = 0; i < es.size(); i++) {
-            clickElement(es.get(i));
+        try {
+            //Flip pieces
+            for (int i = 0; i < es.size(); i++) {
+                clickElement(es.get(i));
 
-            if ((i + 1) % 2 == 0) {
-                try {
-                    Thread.sleep(950);
-                } catch (Exception e) {
-                    //Hafla
+                if ((i + 1) % 2 == 0) {
+                    try {
+                        Thread.sleep(950);
+                    } catch (Exception e) {
+                        //Hafla
+                    }
                 }
             }
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[3]/div/div/div[4]/div[2]/div[1]/div/div[3]/div[3]/div/a[1]")));
+        } catch (Exception e) {
+            System.out.println("Run failed, somehow...");
+        } finally {
+            //Restart
+            driver.get("https://game.scratcher.io/bistik-1");
         }
-        //Restart
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[3]/div/div/div[4]/div[2]/div[1]/div/div[3]/div[3]/div/a[1]")));
-        driver.get("https://game.scratcher.io/bistik-1");
     }
 
     private void clickElement(WebElement e) {
