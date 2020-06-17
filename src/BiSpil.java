@@ -7,6 +7,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.ArrayList;
 import java.util.List;
 
+//TODO error counter, og statistik med runs / error. onExit så jeg selv kan stoppe den og stadig få end printet
+
 class BiSpil {
     private ChromeDriver driver;
     private WebDriverWait wait;
@@ -34,11 +36,7 @@ class BiSpil {
                 clickElement(es.get(i));
 
                 if ((i + 1) % 2 == 0) {
-                    try {
-                        Thread.sleep(950);
-                    } catch (Exception e) {
-                        //Hafla
-                    }
+                    Thread.sleep(950);
                 }
             }
             wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[3]/div/div/div[4]/div[2]/div[1]/div/div[3]/div[3]/div/a[1]")));
